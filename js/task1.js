@@ -18,8 +18,8 @@
 
 /* 1.2 - 2nd Way : I want to see at least one function */
 
- $( document ).ready(function() {
-    console.log( "ready!" );
+/*  $( document ).ready(function() {
+   
 
  $('#btn').click(function() {
     let age =  $('#age').val();
@@ -30,16 +30,38 @@
     }
  });
 }); 
-
+*/
 
 
 /* ######################################################################### */
 /* 1.3 - 3rd Way : I want to see a class */
-/* class Person {
+class Person {
     constructor(){
-        this.name = name;
         this.age = age;
     }
-    
-} */
+    get Age (){
+        return this.age;
+    }
+    set Age(value){
+        this.age = value;
+    }
+}
+
+let PP = new Person();
+
+
+
+$( document ).ready(function() {
+
+ $('#btn').click(function() {
+    PP.age =  $('#age').val();
+    console.log(PP);
+    debugger
+    if (PP.age > 17){
+        alert("Congratulation, try to get a driving license");
+    }else{
+        alert("Please wait until  you are 18 and go for a driving license");
+    }
+ });
+}); 
 
