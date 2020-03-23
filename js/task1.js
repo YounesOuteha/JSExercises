@@ -14,21 +14,32 @@
 }else{
     alert("Please wait until  you are 18 and go for a driving license");
 } */
+/* ####################################################################### */
 
 /* 1.2 - 2nd Way : I want to see at least one function */
 
-$( document ).ready(function() {
+ $( document ).ready(function() {
     console.log( "ready!" );
 
-let age = $('#age').val();
-let btn = $('#btn');
-
-function myFunction(age){
-    debugger
-    if (age>= 18){
-        alert("Congratulation, try to get a driving license")
+ $('#btn').click(function() {
+    let age =  $('#age').val();
+    if (age > 17){
+        alert("Congratulation, try to get a driving license");
     }else{
         alert("Please wait until  you are 18 and go for a driving license");
     }
-}
-});
+ });
+}); 
+
+
+
+/* ######################################################################### */
+/* 1.3 - 3rd Way : I want to see a class */
+/* class Person {
+    constructor(){
+        this.name = name;
+        this.age = age;
+    }
+    
+} */
+
