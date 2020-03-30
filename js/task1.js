@@ -9,7 +9,7 @@
 /* 1.1 - 1st Way : Do it in a simple way */
 /*var age = prompt("Please enter your age!!!");
 
- if (age>= 18){
+ if (age>17 ){
     alert("Congratulation, try to get a driving license")
 }else{
     alert("Please wait until  you are 18 and go for a driving license");
@@ -23,9 +23,9 @@
 
  $('#btn').click(function() {
     let age =  $('#age').val();
-    if (age > 17){
+    if (age > 17 && age < 76){
         alert("Congratulation, try to get a driving license");
-    }else{
+    }else {
         alert("Please wait until  you are 18 and go for a driving license");
     }
  });
@@ -35,6 +35,10 @@
 
 /* ######################################################################### */
 /* 1.3 - 3rd Way : I want to see a class */
+
+
+
+
 class Person {
     constructor(){
         this.age = age;
@@ -48,20 +52,24 @@ class Person {
 }
 
 let PP = new Person();
-
+let m = "";
 
 
 $( document ).ready(function() {
-
  $('#btn').click(function() {
     PP.age =  $('#age').val();
-    console.log(PP);
-    debugger
+    
+
     if (PP.age > 17){
-        alert("Congratulation, try to get a driving license");
+        $('#Message').val("Congratulation, try to get a driving license");
     }else{
-        alert("Please wait until  you are 18 and go for a driving license");
+        $('#Message').val("Please wait until  you are 18 and go for a driving license");
+        
     }
+    
  });
+ $('#Message').val('');
+ $('#age').val('');
+
 }); 
 
